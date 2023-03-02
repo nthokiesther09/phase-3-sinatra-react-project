@@ -20,8 +20,11 @@ ActiveRecord::Schema.define(version: 2023_03_01_112302) do
 
   create_table "projects", force: :cascade do |t|
     t.string "name"
+    t.string "image"
     t.string "description"
-    t.string "status"
+    t.string "completion_status"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "users", force: :cascade do |t|
